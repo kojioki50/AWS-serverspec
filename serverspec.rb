@@ -20,7 +20,7 @@ describe package('unicorn') do
 end
 
 describe command('curl http://18.181.201.238:#{listen_port}/_plugin/head/ -o /dev/null -w "%{http_code}\n" -s') do
-its(:stdout) { should match /^200$/ }
+  its(:stdout) { should match /^200$/ }
 end
 
 
